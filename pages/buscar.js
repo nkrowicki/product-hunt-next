@@ -1,12 +1,12 @@
 import Layout from '../components/layout/layout';
 
 
-export default function Home() {
+export default function Buscar() {
   return (
     <div>
       <Layout>
 
-        <h1>Inicio</h1>
+        <h1>Buscar</h1>
 
 
 
