@@ -30,19 +30,18 @@ const useValidacion = (initialState, validar, fn) => {
     // Funcion que se ejecuta cuando e usuario hace submit
     const handleSubmit = e => {
         e.preventDefault();
-
+        
         const erroresValidacion = validar(valores);
         setErrores(erroresValidacion);
         setSubmitForm(true);
     }
 
     // Cuando se realiza el evento de blur
-    const handleBlur = () => {
-        e.preventDefault();
-
-        const erroresValidacion = validar(valores);
-        setErrores(erroresValidacion);
-        setSubmitForm(true);
+    const handleBlur = (e) => {
+        setValores({
+            ...valores,
+            [e.target.name]: e.target.value
+        });
     }
 
 
